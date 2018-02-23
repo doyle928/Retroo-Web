@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -32,9 +32,33 @@
             <p class="paradise">Paradise</p>
         </div>
     </div>
+    <div class="error">
+        <div class="errorTop">
+            <p>you are welcome</p>
+            <i class="material-icons">close</i>
+        </div>
+        <div class="errorMain">
+            <p>DOWNLOADING VIRUS...</p>
+            <div class="virusProgress">
+                <div id="virusBar"></div>
+            </div>
+            <button onclick="virusBar()">Close</button>
+        </div>
+    </div>
+    <div class="error2">
+        <div class="errorTop">
+            <p>SYSTEM FAILURE</p>
+            <i class="material-icons">close</i>
+        </div>
+        <div class="errorMain">
+            <p>オフライン</p>
+            <button>good-bye</button>
+        </div>
+    </div>
     <div class="crt"></div>
-    <img src="glitch.jpg" id="glitch">
 
+
+    <script src="main.js"></script>
 </body>
 
 </html>
