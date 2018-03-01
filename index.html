@@ -10,55 +10,32 @@
     <link async href="http://fonts.googleapis.com/css?family=Bad%20Script" data-generated="http://enjoycss.com" rel="stylesheet"
         type="text/css" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="/pace/pace.min.js"></script>
+    <link href="/pace/center-simple.css" rel="stylesheet" />
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
-<body>
-    <p class="welcomeIp"></p>
-    <div class="mainShake">
-        <div class="circle"></div>
-        <div class="square"></div>
-        <div class="vhsText">
-            <p class="hifi">HI-FI</p>
-            <p class="vhs">VHS</p>
-        </div>
+<body ng-app="retroApp">
+    <!-- <img class="glitchImg" src="glitch.jpg"> -->
 
+    <div class="scrollbar"></div>
+    <ng-view></ng-view>
 
-        <h1 class="welcomeSplash">Welcome</h1>
-        <div class="toParadise">
-            <p class="to">To</p>
-            <p class="paradise">Paradise</p>
-        </div>
-    </div>
-    <div class="error">
-        <div class="errorTop">
-            <p>you are welcome</p>
-            <i class="material-icons">close</i>
-        </div>
-        <div class="errorMain">
-            <p>DOWNLOADING VIRUS...</p>
-            <div class="virusProgress">
-                <div id="virusBar"></div>
-            </div>
-            <button onclick="virusBar()">Close</button>
-        </div>
-    </div>
-    <div class="error2">
-        <div class="errorTop">
-            <p>SYSTEM FAILURE</p>
-            <i class="material-icons">close</i>
-        </div>
-        <div class="errorMain">
-            <p>オフライン</p>
-            <button>good-bye</button>
-        </div>
-    </div>
     <div class="crt"></div>
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.7/angular-route.js"></script>
     <script src="main.js"></script>
+    <script src="module.js"></script>
+    <script src="config.js"></script>
+    <script src="components/about.component.js"></script>
+    <script src="components/splash.component.js"></script>
+    <script src="directives/enterHover.directive.js"></script>
+    <script src="directives/closeError.directive.js"></script>
 </body>
 
 </html>

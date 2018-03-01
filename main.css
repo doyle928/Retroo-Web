@@ -1,6 +1,7 @@
 body {
     background: radial-gradient(circle, rgb(45, 45, 45), rgb(0, 0, 0));
     overflow: hidden;
+    cursor: default;
 }
 
 .welcomeIp {
@@ -46,6 +47,82 @@ body {
     0% {
         clip: rect(0px, 450px, 3px, 0);
     }
+    10% {
+        clip: rect(19px, 450px, 21px, 0);
+    }
+    20% {
+        clip: rect(5px, 450px, 5px, 0);
+    }
+    30% {
+        clip: rect(23px, 450px, 23px, 0);
+    }
+    40% {
+        clip: rect(6px, 450px, 8px, 0);
+    }
+    50% {
+        clip: rect(26px, 450px, 29px, 0);
+    }
+    60% {
+        clip: rect(8px, 450px, 8px, 0);
+    }
+    70% {
+        clip: rect(32px, 450px, 32px, 0);
+    }
+    80% {
+        clip: rect(11px, 450px, 13px, 0);
+    }
+    90% {
+        clip: rect(36px, 450px, 39px, 0);
+    }
+    100% {
+        clip: rect(14px, 450px, 16px, 0);
+    }
+
+}
+
+.welcomeCity {
+    content: attr(data-text);
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 300;
+    position: relative;
+    top: 30px;
+    width: 500px;
+    margin: 5px auto 0 auto;
+}
+
+.welcomeCity::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    left: 2px;
+    color: white;
+    text-shadow: 2px 0 red;
+    animation: glitch-anim2 2.1s infinite linear alternate-reverse;
+}
+
+.welcomeCity::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    left: -2px;
+    color: white;
+    text-shadow: -2px 0 blue;
+    animation: glitch-anim2 2.1s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim2 {
+    0% {
+        clip: rect(0px, 450px, 3px, 0);
+    }
     20% {
         clip: rect(5px, 450px, 5px, 0);
     }
@@ -68,7 +145,7 @@ body {
     width: 1px;
     height: 80px;
     transform: rotate(40deg);
-    margin: 265px auto;
+    margin: 225px auto;
     border-radius: 50%;
     box-shadow: 0px 0px 160px 110px #d0477e;
     animation: glow 2.5s linear infinite alternate;
@@ -169,14 +246,14 @@ body {
 .to {
     font-size: 3.5em;
     position: absolute;
-    top: -380px;
+    top: -340px;
     left: 38.5%;
 }
 
 .paradise {
     display: block;
     position: absolute;
-    top: -430px;
+    top: -390px;
     left: 43%;
     font: normal normal bold 6em/normal "Bad Script", Helvetica, sans-serif;
     text-align: center;
@@ -205,6 +282,8 @@ body {
     border-bottom: 1px solid black;
     border-left: 1px solid rgb(211, 211, 211);
     border-top: 1px solid rgb(211, 211, 211);
+    box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.15);
+    z-index: 10;
     display:none;
 }
 
@@ -277,6 +356,7 @@ body {
     margin: 0 auto;
     margin-top: 20px;
     cursor: pointer;
+
 }
 
 .error2 {
@@ -290,6 +370,8 @@ body {
     border-bottom: 1px solid black;
     border-left: 1px solid rgb(211, 211, 211);
     border-top: 1px solid rgb(211, 211, 211);
+    box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.15);
+    z-index: 11;
     display:none;
 
 }
@@ -466,7 +548,7 @@ body {
 }
 
 .mainShake {
-    animation: shake 7s infinite linear alternate-reverse;
+    animation: shake 8s infinite linear alternate-reverse;
 }
 
 @keyframes shake {
@@ -475,7 +557,7 @@ body {
         transform: translate3d(-1px, 0, 0);
     }
     20%,
-    80% {
+    25%{
         transform: translate3d(2px, 0, 0);
     }
     30%,
@@ -486,8 +568,150 @@ body {
     60% {
         transform: translate3d(1px, 0, 0);
     }
+    43%,
     50%,
+    93%,
     100% {
         transform: translate3d(0, 0, 0);
+    }
+}
+
+.enter {
+    font-family: 'Press Start 2P', cursive;
+    content: attr(data-text);
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 200;
+    position: relative;
+    top: -50px;
+    width: 475px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.enter::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    left: 2px;
+    color: white;
+    text-shadow: 2px 0 red;
+    animation: glitch-anim2 2s infinite linear alternate-reverse;
+}
+
+.enter::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    left: -2px;
+    color: white;
+    text-shadow: -2px 0 blue;
+    animation: glitch-anim2 2s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim2 {
+    0%, 90% {
+        clip: rect(0px, 450px, 3px, 0);
+    }
+    20%,70% {
+        clip: rect(6px, 450px, 9px, 0);
+    }
+    40% {
+        clip: rect(12px, 450px, 13px, 0);  
+    }
+    60%,10% {
+        clip: rect(16px, 450px, 14px, 0);      
+    }
+    80%,30% {
+        clip: rect(18px, 450px, 20px, 0);
+    }
+    100%,50% {
+        clip: rect(21px, 450px, 25px, 0);
+    }
+}
+/* 
+.glitchImg {
+    content: url(glitch.jpg);
+    position: relative;
+    top: 0;
+    left:0;
+    width: 900px;
+    height: auto;
+    opacity: 1;
+}
+
+.glitchImg::before {
+    content: url(glitch.jpg);
+    position: absolute;
+    top: 0;
+    left: 50px;
+    box-shadow: 50px 0 red;
+    opacity: 1;
+    animation: glitch-top 8s infinite linear alternate-reverse;
+}
+
+.glitchImg::after {
+    content: url(glitch.jpg);
+    position: absolute;
+    top: 0;
+    left: -50px;
+    box-shadow: -50px 0 blue;
+    opacity: 1;
+    animation: glitch-top 8s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-top {
+    0%, 90% {
+        clip: rect(35px,1200px, 73px, -100);
+    }
+    20%,70% {
+        clip: rect(198px, 1200px, 240px, -100);
+    }
+    40% {
+        clip: rect(340px, 1200px, 345px, -100); 
+    }
+    60%,10% {
+        clip: rect(316px, 1200px, 303px, -100); 
+    }
+    80%,30% {
+        clip: rect(467px, 1200px, 499px, -100);
+    }
+    100%,50% {
+        clip: rect(500px, 450px, 550px, -100);
+    }
+} */
+
+
+.scrollbar {
+    width: 150%;
+    height: 10px;
+    background-color: rgba(255,255,255,.035);
+    position: absolute;
+    left:-500px;
+    top:-600px;
+    transform: rotate(30deg);
+    box-shadow: 0 0 350px white;
+    animation: scroll 6s infinite linear;
+}
+@keyframes scroll {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+        transform: translateY(300vh);
+    }
+    51%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
     }
 }
